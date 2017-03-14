@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="tracker.js"></script>
+    <style media="screen">
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2>Defaults</h2>
+    <form>
+        <input type="text" id="fieldDef" placeholder="test" value="123">
+        <input type="text" id="valueDef" placeholder="test2" value="12345">
+        <input type="button" class="add-row" value="Add Row">
+    </form>
+    <br><br>
+    <table style="width:50%">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="record"></td>
+                <td>
+                    <form>
+                        <input type="text" name="value" placeholder="test">
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" name="field" placeholder="test2">
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="delete-row">Delete Row</button>
+    <br><br> *Select checkbox to delete row from table
+</body>
+
+
+</html>
