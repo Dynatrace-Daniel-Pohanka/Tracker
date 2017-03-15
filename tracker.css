@@ -1,0 +1,12 @@
+.toggle{
+  float: right;
+}
+.tracker{
+  width:100%
+}
+table input{
+  width:100%
+}
+#settings{
+  display: none;
+}

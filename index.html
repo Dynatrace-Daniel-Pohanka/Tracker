@@ -6,6 +6,7 @@
     <title>Home</title>
     <script src="jquery-3.1.1.js"></script>
     <script src="tracker.js"></script>
+    <link rel="stylesheet" href="tracker.css">
     <style media="screen">
         table,
         th,
@@ -17,39 +18,79 @@
 
 
 <body>
-    <h2>Defaults</h2>
-    <form>
-        <input type="text" id="fieldDef" placeholder="test" value="123">
-        <input type="text" id="valueDef" placeholder="test2" value="12345">
-        <input type="button" class="add-row" value="Add Row">
-    </form>
-    <br><br>
-    <table style="width:50%">
-        <thead>
-            <tr>
-                <th>Select</th>
-                <th>Field</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="checkbox" name="record"></td>
-                <td>
-                    <form>
-                        <input type="text" name="value" placeholder="test">
-                    </form>
-                </td>
-                <td>
-                    <form>
-                        <input type="text" name="field" placeholder="test2">
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <button type="button" class="delete-row">Delete Row</button>
-    <br><br> *Select checkbox to delete row from table
+    <h1>Measurement Tracker</h1>
+    <div id="settings">
+        <h3>Defaults</h3>
+        <table>
+            <thead>
+                <th>Setting 1</th>
+                <th>Setting 2</th>
+                <th>Month</th>
+                <th>Year</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" id="fieldDef" placeholder="test" value=""></td>
+                    <td><input type="text" id="valueDef" placeholder="test2" value=""></td>
+                    <td><input type="radio" id='regular' name="optradio"></td>
+                    <td><input type="radio" id='regular' name="optradio"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div>
+            <button type="button" class="toggle">Toggle</button>
+        </div>
+        <div>
+            <table class=tracker>
+                <thead>
+                    <tr>
+                        <th>Delete</th>
+                        <th>Pages/Steps</th>
+                        <th>Frequency in Minutes</th>
+                        <th>Number of Locations</th>
+                        <th>Object Level</th>
+                        <th>SCoE</th>
+                        <th>Hours/Day</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="delete"></td>
+                        <td>
+                            <form>
+                                <input type="text" name="steps" placeholder="# of steps">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="text" name="freq" placeholder="Minutes">
+                            </form>
+                        </td>
+                        <td>
+                            <form>
+                                <input type="text" name="loc" placeholder="# of loc.">
+                            </form>
+                        </td>
+                        <td><input type="checkbox" name="object"></td>
+                        <td><input type="checkbox" name="scoe"></td>
+                        <td>
+                            <form>
+                                <input type="text" name="hours" placeholder="hours">
+                            </form>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="add-row">Add Row</button>
+        <button type="button" class="delete-row">Delete Row</button>
+        <br><br> *Select checkbox to delete row from table
+    </div>
 </body>
 
 
