@@ -7,19 +7,13 @@
     <script src="jquery-3.1.1.js"></script>
     <script src="tracker.js"></script>
     <link rel="stylesheet" href="tracker.css">
-    <style media="screen">
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
+
 </head>
 
 
 <body>
     <h1>Measurement Tracker</h1>
-    <div id="settings">
+    <div class="settings">
         <h3>Defaults</h3>
         <table>
             <thead>
@@ -32,8 +26,8 @@
                 <tr>
                     <td><input type="text" id="fieldDef" placeholder="test" value=""></td>
                     <td><input type="text" id="valueDef" placeholder="test2" value=""></td>
-                    <td><input type="radio" id='regular' name="optradio"></td>
-                    <td><input type="radio" id='regular' name="optradio"></td>
+                    <td><input type="radio" class="regular" name="optradio"></td>
+                    <td><input type="radio" class="regular" name="optradio"></td>
                 </tr>
             </tbody>
         </table>
@@ -44,7 +38,7 @@
             <button type="button" class="toggle">Toggle</button>
         </div>
         <div>
-            <table class=tracker>
+            <table class="tracker">
                 <thead>
                     <tr>
                         <th>Delete</th>
@@ -62,27 +56,27 @@
                         <td><input type="checkbox" name="delete"></td>
                         <td>
                             <form>
-                                <input type="text" name="steps" placeholder="# of steps">
+                                <input id="steps" type="text" name="steps" placeholder="# of steps" onchange="update();">
                             </form>
                         </td>
                         <td>
                             <form>
-                                <input type="text" name="freq" placeholder="Minutes">
+                                <input id="minutes" type="text" name="freq" placeholder="minutes" onchange="update();">
                             </form>
                         </td>
                         <td>
                             <form>
-                                <input type="text" name="loc" placeholder="# of loc.">
+                                <input id="loc" type="text" name="loc" placeholder="# of loc." onchange="update();">
                             </form>
                         </td>
-                        <td><input type="checkbox" name="object"></td>
-                        <td><input type="checkbox" name="scoe"></td>
+                        <td><input type="checkbox" name="object" id="object"></td>
+                        <td><input type="checkbox" name="scoe" id="scoe"></td>
                         <td>
                             <form>
-                                <input type="text" name="hours" placeholder="hours">
+                                <input id="hours" type="text" name="hours" placeholder="hours" onchange="update();">
                             </form>
                         </td>
-                        <td></td>
+                        <td><input id="subtotal" type="text" name="subtotal" placeholder="subtotal"></td>
                     </tr>
                 </tbody>
             </table>
