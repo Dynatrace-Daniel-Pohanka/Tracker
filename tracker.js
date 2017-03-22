@@ -1,3 +1,6 @@
+function multiRadio() {
+
+}
 function update(row) {
 
     var stepsPlace = 'steps' + row;
