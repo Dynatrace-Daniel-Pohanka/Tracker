@@ -13,30 +13,7 @@
 
 <body>
     <h1>Measurement Tracker</h1>
-    <div class="settings">
-        <h3>Defaults</h3>
-        <table>
-            <thead>
-                <th>Setting 1</th>
-                <th>Setting 2</th>
-                <th>Month</th>
-                <th>Year</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="text" id="fieldDef" placeholder="test" value=""></td>
-                    <td><input type="text" id="valueDef" placeholder="test2" value=""></td>
-                    <td><input type="radio" class="regular" name="optradio"></td>
-                    <td><input type="radio" class="regular" name="optradio"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
     <div class="container">
-        <div>
-            <button type="button" class="toggle">Toggle</button>
-        </div>
         <div>
             <table class="tracker">
                 <thead>
@@ -56,24 +33,24 @@
                         <td><input type="checkbox" name="delete"></td>
                         <td>
                             <form>
-                                <input id="steps0" type="text" name="steps" placeholder="# of steps" onchange="update('0');">
+                                <input id="steps0" type="text" name="steps" placeholder="# of steps" onchange="update(0);">
                             </form>
                         </td>
                         <td>
                             <form>
-                                <input id="minutes0" type="text" name="freq" placeholder="minutes" onchange="update('0');">
+                                <input id="minutes0" type="text" name="freq" placeholder="minutes" onchange="update(0);">
                             </form>
                         </td>
                         <td>
                             <form>
-                                <input id="loc0" type="text" name="loc" placeholder="# of loc." onchange="update('0');">
+                                <input id="loc0" type="text" name="loc" placeholder="# of loc." onchange="update(0);">
                             </form>
                         </td>
                         <td><input type="checkbox" name="object" id="object0"></td>
                         <td><input type="checkbox" name="scoe" id="scoe0"></td>
                         <td>
                             <form>
-                                <input id="hours0" type="text" name="hours" placeholder="hours" onchange="update('0');">
+                                <input id="hours0" type="text" name="hours" placeholder="hours" onchange="update(0);">
                             </form>
                         </td>
                         <td><input id="subtotal0" type="text" name="subtotal" placeholder="subtotal" readonly></td>
@@ -81,9 +58,30 @@
                 </tbody>
             </table>
         </div>
-        <button type="button" class="add-row">Add Row</button>
-        <button type="button" class="delete-row">Delete Row</button>
+        <button type="button" class="add-row">&#10133;</button>
+        <button type="button" class="delete-row">&#10134;</button>
         <br><br> *Select checkbox to delete row from table
+
+        <br><br>
+        <div>
+            <button type="button" class="toggle">&#9881;</button>
+        </div>
+        <div class="settings">
+            <table>
+                <thead>
+                    <th>Day</th>
+                    <th>Month</th>
+                    <th>Year</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="radio" class="regular" name="optradio" id="day"></td>
+                        <td><input type="radio" class="regular" name="optradio" id="month"></td>
+                        <td><input type="radio" class="regular" name="optradio" id="year"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

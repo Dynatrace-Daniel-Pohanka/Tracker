@@ -1,15 +1,15 @@
-.toggle{
+/*.toggle{
   float: right;
-}
+}*/
 .tracker{
   width:100%
 }
 table input{
   width:100%
 }
-.settings{
+/*.settings{
   display: none;
-}
+}*/
 *{
   background-color: rgb(66, 66, 66);
   color: white;
