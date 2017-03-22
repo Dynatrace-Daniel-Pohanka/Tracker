@@ -13,12 +13,14 @@
 
 <body>
     <h1>Measurement Tracker</h1>
+    <h2>Backbone Tests</h2>
     <div class="container">
         <div>
-            <table class="tracker">
+            <table id="tracker">
                 <thead>
                     <tr>
                         <th>Delete</th>
+                        <th>Test Name</th>
                         <th>Pages/Steps</th>
                         <th>Frequency in Minutes</th>
                         <th>Number of Locations</th>
@@ -28,22 +30,23 @@
                         <th>Subtotal</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="calculator">
                     <tr>
                         <td><input type="checkbox" name="delete"></td>
+                        <td><input type="text" name="testname" placeholder="name" id="test-name0"></td>
                         <td>
-                            <input id="steps0" type="text" name="steps" placeholder="# of steps" onchange="update(0);">
+                            <input id="steps0" type="text" name="steps" placeholder="# of steps" onchange="update(0,1);">
                         </td>
                         <td>
-                            <input id="minutes0" type="text" name="freq" placeholder="minutes" onchange="update(0);">
+                            <input id="minutes0" type="text" name="freq" placeholder="minutes" onchange="update(0,1);">
                         </td>
                         <td>
-                            <input id="loc0" type="text" name="loc" placeholder="# of loc." onchange="update(0);">
+                            <input id="loc0" type="text" name="loc" placeholder="# of loc." onchange="update(0,1);">
                         </td>
-                        <td><input type="checkbox" name="object" id="object0" checked="true" onchange="update(0);"></td>
-                        <td><input type="checkbox" name="scoe" id="scoe0" onchange="update(0);"></td>
+                        <td><input type="checkbox" name="object" id="object0" checked="true" onchange="update(0,1);"></td>
+                        <td><input type="checkbox" name="scoe" id="scoe0" onchange="update(0,1);"></td>
                         <td>
-                            <input id="hours0" type="text" name="hours" placeholder="hours" onchange="update(0);">
+                            <input id="hours0" type="text" name="hours" placeholder="hours" onchange="update(0,1);">
                         </td>
                         <td><input id="subtotal0" type="text" name="subtotal" placeholder="subtotal" readonly></td>
                     </tr>
@@ -64,14 +67,14 @@
                     <th>Day</th>
                     <th>Month</th>
                     <th>Year</th>
-                    <th># of</th>
+                    <th>Multiplier</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="radio" name="optradio" id="day" onchange="update();" value="dayRad"></td>
-                        <td><input type="radio" name="optradio" id="month" onchange="update();" value="monthRad"></td>
-                        <td><input type="radio" name="optradio" id="year" onchange="update();" value="yearRad"></td>
-                        <td><input type="text" name="xvalue" id="multi" placeholder="Days"></td>
+                        <td><input type="radio" name="optradio" id="day" onchange="multiRadio();" value="dayRad" checked="true"></td>
+                        <td><input type="radio" name="optradio" id="month" onchange="multiRadio();" value="monthRad"></td>
+                        <td><input type="radio" name="optradio" id="year" onchange="multiRadio();" value="yearRad"></td>
+                        <td><input type="text" name="xvalue" id="multi" placeholder="# of days" onchange="multiRadio();"></td>
                     </tr>
                 </tbody>
             </table>
