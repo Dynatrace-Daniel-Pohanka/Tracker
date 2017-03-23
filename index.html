@@ -10,16 +10,15 @@
 
 </head>
 
-
 <body>
     <h1>Measurement Tracker</h1>
     <h2>Backbone Tests</h2>
     <div class="container">
-        <div>
+        <div class="backbone">
             <table id="tracker">
                 <thead>
                     <tr>
-                        <th>Delete</th>
+                        <th>Delete*</th>
                         <th>Test Name</th>
                         <th>Pages/Steps</th>
                         <th>Frequency in Minutes</th>
@@ -52,12 +51,31 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <button type="button" class="add-row">&#10133;</button>
-        <button type="button" class="delete-row">&#10134;</button>
-        <br><br> *Select checkbox to delete row from table
+            <button type="button" class="add-row">&#10133;</button>
+            <button type="button" class="delete-row">&#10134;</button>
 
+        </div>
         <br><br>
+        <div class="last-mile">
+          <h2>Last Mile Tests</h2>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="mobile">
+          <h2>Mobile Tests</h2>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
         <div>
             <button type="button" class="toggle">&#9881;</button>
         </div>
@@ -80,6 +98,7 @@
             </table>
         </div>
     </div>
+    <p><br><br> *Select checkbox to delete row from table</p>
 </body>
 
 
